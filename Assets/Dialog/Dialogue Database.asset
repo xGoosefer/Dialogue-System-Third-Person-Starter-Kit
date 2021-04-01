@@ -372,7 +372,7 @@ MonoBehaviour:
   - id: 2
     fields:
     - title: Title
-      value: Barks
+      value: Test Barks
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
