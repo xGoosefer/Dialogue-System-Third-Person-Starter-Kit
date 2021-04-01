@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 [SelectionBase]
 public class ThirdPersonCharacterController : MonoBehaviour
@@ -22,6 +23,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
     private GameObject cameraFollowTarget;
     private Vector3 cameraFollowOffset;
     private bool isSprintActivated;
+    private bool inConversation;
     private CinemachineVirtualCamera walkingCamera, sprintingCamera;
 
     private bool IsSprinting
@@ -49,6 +51,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
         walkingCamera = GameObject.Find("Walking Camera").GetComponent<CinemachineVirtualCamera>();
         sprintingCamera = GameObject.Find("Sprinting Camera").GetComponent<CinemachineVirtualCamera>();
         cameraFollowTarget = GameObject.Find("Camera Follow Target");
+        cameraFollowTarget.transform.SetParent(null);
         cameraFollowOffset = cameraFollowTarget.transform.position - transform.position;
     }
 
@@ -133,10 +136,29 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     private void GetInput()
     {
-        xMoveInput = Input.GetAxis("Horizontal");
-        yMoveInput = Input.GetAxis("Vertical");
-        xLookInput = Input.GetAxis("Mouse X");
-        yLookInput = Input.GetAxis("Mouse Y");
-        sprintInputButtonDown = Input.GetButton("Sprint");
+        xMoveInput = inConversation ? 0 : Input.GetAxis("Horizontal");
+        yMoveInput = inConversation ? 0 : Input.GetAxis("Vertical");
+        xLookInput = inConversation ? 0 : Input.GetAxis("Mouse X");
+        yLookInput = inConversation ? 0 : Input.GetAxis("Mouse Y");
+        sprintInputButtonDown = inConversation ? false : Input.GetButton("Sprint");
+    }
+
+    private void OnEnable()
+    {
+        DialogueManager.instance.conversationStarted += OnConversationStarted;
+        DialogueManager.instance.conversationEnded += OnConversationEnded;
+    }
+    private void OnDisable()
+    {
+        DialogueManager.instance.conversationStarted -= OnConversationStarted;
+        DialogueManager.instance.conversationEnded -= OnConversationEnded;
+    }
+    private void OnConversationStarted(Transform t)
+    {
+        inConversation = true;
+    }
+    private void OnConversationEnded(Transform t)
+    {
+        inConversation = false;
     }
 }
