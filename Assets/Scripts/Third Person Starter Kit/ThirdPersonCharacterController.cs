@@ -138,7 +138,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
         yMoveInput = inConversation ? 0 : Input.GetAxis("Vertical");
         xLookInput = inConversation ? 0 : Input.GetAxis("Mouse X");
         yLookInput = inConversation ? 0 : Input.GetAxis("Mouse Y");
-        sprintInputButtonDown = inConversation ? false : Input.GetButton("Sprint");
+        sprintInputButtonDown = inConversation ? false : Input.GetButton("Fire3");
     }
 
     private void OnEnable()
