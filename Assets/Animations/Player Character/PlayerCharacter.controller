@@ -276,7 +276,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: bd541e5264231794ba37bca8988017e7,
+  m_Motion: {fileID: -203655887218126122, guid: 4ed8e71c5de5f484f8b92486694b7c0c,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -417,7 +417,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: d9ebe70c9831b21428e8dd3d5d273461,
+    m_Motion: {fileID: -203655887218126122, guid: a0d2c0b3af605c0488360c4bb4ce44d6,
       type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: -0.5}
@@ -426,7 +426,7 @@ BlendTree:
     m_DirectBlendParameter: Forward
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: f06909bee9aa8034b94a41ebfdfdf7df,
+    m_Motion: {fileID: -203655887218126122, guid: cc5df96fdd7bd274690297a0b52104fe,
       type: 3}
     m_Threshold: 0.25
     m_Position: {x: 0, y: 0.5}
@@ -435,7 +435,7 @@ BlendTree:
     m_DirectBlendParameter: Forward
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 656dbada9e1ef4c4ba12f046419154d7,
+    m_Motion: {fileID: -203655887218126122, guid: cd735caeb91b7d840b8652bf77f72942,
       type: 3}
     m_Threshold: 0.5
     m_Position: {x: 0.5, y: 0}
@@ -444,16 +444,16 @@ BlendTree:
     m_DirectBlendParameter: Forward
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 1a0ab3e6e8b78074897482c6aeee6b38,
+    m_Motion: {fileID: -203655887218126122, guid: 392ed74cdfbfa134c9581c088648288c,
       type: 3}
     m_Threshold: 0.75
     m_Position: {x: -0.5, y: 0}
-    m_TimeScale: 0.75
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Forward
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 840ca4df7c0da2d4f8cf9188ce27970f,
+    m_Motion: {fileID: -203655887218126122, guid: 825821a5f418bcf4eb3a15b1280f9bae,
       type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
