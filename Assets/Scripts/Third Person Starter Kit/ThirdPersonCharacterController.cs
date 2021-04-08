@@ -12,6 +12,9 @@ using PixelCrushers.DialogueSystem;
 public class ThirdPersonCharacterController : MonoBehaviour
 {
     [SerializeField]
+    private bool invertCameraY = true;
+
+    [SerializeField]
     private float cameraRotationSpeed = 0.5f;
 
     [SerializeField]
@@ -139,8 +142,9 @@ public class ThirdPersonCharacterController : MonoBehaviour
     /// </summary>
     private void UpdateCameraRotation()
     {
+        var invertYMultiplier = invertCameraY ? -1 : 1;
         cameraFollowTarget.transform.rotation *= Quaternion.AngleAxis(xLookInput * cameraRotationSpeed, Vector3.up);
-        cameraFollowTarget.transform.rotation *= Quaternion.AngleAxis(yLookInput * cameraRotationSpeed, Vector3.right);
+        cameraFollowTarget.transform.rotation *= Quaternion.AngleAxis(yLookInput * -cameraRotationSpeed * invertYMultiplier, Vector3.right);
 
         var angles = cameraFollowTarget.transform.localEulerAngles;
         angles.z = 0;
