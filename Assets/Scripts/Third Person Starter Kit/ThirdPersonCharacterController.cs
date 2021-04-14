@@ -65,13 +65,19 @@ public class ThirdPersonCharacterController : MonoBehaviour
     void Start()
     {
         MoveCharacterControllerComponentToParent();
-        animator = GetComponentInParent<Animator>();
-        animator.runtimeAnimatorController = animatorController;
+        InitializeAnimator();
         InitializePlayerCameras();
         IntializeCameraFollowTarget();
 
         // Set parent tag to player so cameras can properly ignore, etc.
         transform.parent.tag = "Player";
+    }
+
+    private void InitializeAnimator()
+    {
+        animator = GetComponentInParent<Animator>();
+        animator.runtimeAnimatorController = animatorController;
+        animator.updateMode = AnimatorUpdateMode.AnimatePhysics;
     }
 
     private void InitializePlayerCameras()
