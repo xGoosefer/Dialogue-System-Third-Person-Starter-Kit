@@ -17,25 +17,37 @@ public class NpcIdleStateMachineBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        // Initialize reference to npc if we haven't yet. 
+        // Not sure if there's somewhere that only gets called once to do this.
+        // Reset elapsed time and randomAnimationValue
         if (npc == null)
         {
             npc = animator.GetComponentInChildren<Npc>();
-            timeBetweenIdleAnimationChangeRolls = 
+            timeBetweenIdleAnimationChangeRolls =
                 Random.Range(npc.MinTimeBetweenIdleAnimationChangeRolls, npc.MaxTimeBetweenIdleAnimationChangeRolls);
         }
 
-        elapsedTime = 0;
-        animator.SetInteger(randomAnimationValueAnimParam, 0);
+        if (npc.UseIdleAnimationFlourishes)
+        {
+            elapsedTime = 0;
+            animator.SetInteger(randomAnimationValueAnimParam, 0);
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+    // After the timeBetweenIdleAnimationChangeRolls has elapsed, 
+    // roll to determine a new randomAnimationValue.
+    // The AnimationController uses this parameter to determine transitions to alternate anims to create variety.
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        elapsedTime += Time.deltaTime;
-        if (elapsedTime >= timeBetweenIdleAnimationChangeRolls)
+        if (npc.UseIdleAnimationFlourishes)
         {
-            animator.SetInteger(randomAnimationValueAnimParam, GetAnimationChangeRoll());
-            elapsedTime = 0;
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime >= timeBetweenIdleAnimationChangeRolls)
+            {
+                animator.SetInteger(randomAnimationValueAnimParam, GetAnimationChangeRoll());
+                elapsedTime = 0;
+            }
         }
     }
 

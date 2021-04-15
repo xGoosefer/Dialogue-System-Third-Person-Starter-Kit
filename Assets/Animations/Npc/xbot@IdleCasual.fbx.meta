@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: c81eefe71f221e6429764afc87879505
+guid: 9913670e465d4af4cbb1e7a793fa22c0
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: weight shift
+    second: IdleCasual
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: weight shift
+      name: IdleCasual
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 283
+      lastFrame: 499
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
