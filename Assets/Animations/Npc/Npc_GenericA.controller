@@ -120,7 +120,7 @@ AnimatorStateMachine:
     m_Position: {x: 0, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6440979455768916455}
-    m_Position: {x: 250, y: 120, z: 0}
+    m_Position: {x: 250, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5492703286653136886}
     m_Position: {x: -210, y: 120, z: 0}
@@ -151,13 +151,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: CycleOffsetValue
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
