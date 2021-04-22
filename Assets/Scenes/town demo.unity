@@ -3660,10 +3660,40 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3594191103014986385, guid: ea40c9261eaf03644a723872fdbf2d9f,
+        type: 3}
+      propertyPath: maxSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594191103014986385, guid: ea40c9261eaf03644a723872fdbf2d9f,
+        type: 3}
+      propertyPath: minSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594191103014986385, guid: ea40c9261eaf03644a723872fdbf2d9f,
+        type: 3}
+      propertyPath: conversation
+      value: RemyBarks
+      objectReference: {fileID: 0}
     - target: {fileID: 3594191103014986387, guid: ea40c9261eaf03644a723872fdbf2d9f,
         type: 3}
       propertyPath: actor
       value: Remy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594191103014986387, guid: ea40c9261eaf03644a723872fdbf2d9f,
+        type: 3}
+      propertyPath: barkUISettings.barkUIOffset.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594191103014986387, guid: ea40c9261eaf03644a723872fdbf2d9f,
+        type: 3}
+      propertyPath: barkUISettings.barkUIOffset.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594191103014986387, guid: ea40c9261eaf03644a723872fdbf2d9f,
+        type: 3}
+      propertyPath: barkUISettings.barkUIOffset.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3594191103014986398, guid: ea40c9261eaf03644a723872fdbf2d9f,
         type: 3}
@@ -22930,6 +22960,16 @@ PrefabInstance:
         type: 3}
       propertyPath: conversation
       value: JamesIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594191103014986385, guid: ea40c9261eaf03644a723872fdbf2d9f,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1457753843}
+    - target: {fileID: 3594191103014986385, guid: ea40c9261eaf03644a723872fdbf2d9f,
+        type: 3}
+      propertyPath: conversation
+      value: JamesBarks
       objectReference: {fileID: 0}
     - target: {fileID: 3594191103014986387, guid: ea40c9261eaf03644a723872fdbf2d9f,
         type: 3}
