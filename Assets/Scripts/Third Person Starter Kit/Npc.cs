@@ -28,7 +28,7 @@ public class Npc : MonoBehaviour
     void Start()
     {           
         animator = GetComponentInParent<Animator>();
-        if (animatorController != null)
+        if (animator != null)
         {
             animator.runtimeAnimatorController = animatorController;
 
