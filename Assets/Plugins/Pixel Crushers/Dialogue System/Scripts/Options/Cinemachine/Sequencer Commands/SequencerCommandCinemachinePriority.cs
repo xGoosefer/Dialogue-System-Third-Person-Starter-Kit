@@ -50,28 +50,31 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
             else
             {
                 if (DialogueDebug.LogInfo) Debug.Log("Dialogue System: Sequencer: CinemachinePriority(" + vcamName + ", " + priority + ", cut=" + cut + ")");
+
+                // Handle cut:
+                var cinemachineBrain = cut ? FindObjectOfType<CinemachineBrain>() : null;
+                var previousBlendStyle = CinemachineBlendDefinition.Style.EaseInOut;
+                var previousBlendTime = 0f;
+                if (cut && cinemachineBrain != null)
+                {
+                    previousBlendStyle = cinemachineBrain.m_DefaultBlend.m_Style;
+                    previousBlendTime = cinemachineBrain.m_DefaultBlend.m_Time;
+                    cinemachineBrain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.Cut;
+                    cinemachineBrain.m_DefaultBlend.m_Time = 0;
+                    cinemachineBrain.enabled = false;
+                }
+
                 if (all)
                 {
-                    var cinemachineBrain = cut ? FindObjectOfType<CinemachineBrain>() : null;
-                    var previousBlendTime = (cinemachineBrain != null) ? cinemachineBrain.m_DefaultBlend.m_Time : 0;
                     var allVcams = FindObjectsOfType<CinemachineVirtualCamera>();
                     foreach (CinemachineVirtualCamera avcam in allVcams)
                     {
                         avcam.Priority = priority;
                         if (cut)
                         {
-                            if (cinemachineBrain != null)
-                            {
-                                cinemachineBrain.m_DefaultBlend.m_Time = 0;
-                                avcam.enabled = false;
-                                avcam.enabled = true;
-                            }
+                            avcam.enabled = false;
+                            avcam.enabled = true;
                         }
-                    }
-                    if (cut)
-                    {
-                        yield return null;
-                        cinemachineBrain.m_DefaultBlend.m_Time = previousBlendTime;
                     }
                 }
                 else
@@ -79,17 +82,18 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
                     vcam.Priority = priority;
                     if (cut)
                     {
-                        var cinemachineBrain = FindObjectOfType<CinemachineBrain>();
-                        if (cinemachineBrain != null)
-                        {
-                            var previousBlendTime = cinemachineBrain.m_DefaultBlend.m_Time;
-                            cinemachineBrain.m_DefaultBlend.m_Time = 0;
-                            vcam.enabled = false;
-                            vcam.enabled = true;
-                            yield return null;
-                            cinemachineBrain.m_DefaultBlend.m_Time = previousBlendTime;
-                        }
+                        vcam.enabled = false;
+                        vcam.enabled = true;
                     }
+                }
+
+                // Clean up cut:
+                if (cut && cinemachineBrain != null)
+                {
+                    cinemachineBrain.enabled = true;
+                    yield return null;
+                    cinemachineBrain.m_DefaultBlend.m_Style = previousBlendStyle;
+                    cinemachineBrain.m_DefaultBlend.m_Time = previousBlendTime;
                 }
             }
             Stop();
