@@ -3905,7 +3905,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 10
@@ -3968,7 +3968,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'CinemachinePriority(PeteVcam,11,cut);
+        value: 'CinemachinePriority(JodyVcam, cut);
 
           {{default}}'
         type: 0
@@ -4041,9 +4041,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'CinemachinePriority(JodyVcam,12);
-
-          {{default}}'
+        value: 
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -4118,9 +4116,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'CinemachinePriority(PeteVcam,13);
-
-          {{default}}'
+        value: 
         type: 0
         typeString: 
       conversationID: 10
