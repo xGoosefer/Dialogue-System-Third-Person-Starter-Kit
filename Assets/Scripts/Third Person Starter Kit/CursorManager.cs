@@ -27,7 +27,7 @@ public class CursorManager : MonoBehaviour
 
     private void OnConversationStarted(Transform t)
     {
-        UpdateCursorVisibility(false);
+        UpdateCursorVisibility(true);
     }
     private void OnEnable()
     {
