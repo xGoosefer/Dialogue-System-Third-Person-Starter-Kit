@@ -214,150 +214,46 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
-  items:
-  - id: 1
-    fields:
-    - title: Name
-      value: Dead Reckoning
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: Before heading to the bus station, you stopped by your brother's work
-        to say goodbye. That's when all hell broke loose. You're safe, for now, but
-        you're also trapped. You don't have enough supplies to last for long. There
-        has to be a way out of this mess!
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Success Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Failure Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: State
-      value: active
-      type: 0
-      typeString: CustomFieldType_QuestState
-    - title: Is Item
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-  - id: 2
-    fields:
-    - title: Name
-      value: Situation at Hand
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 'What a crazy day! I wonder if any of these folks know whats going on?
-        I hope James is OK... '
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Success Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Failure Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: State
-      value: active
-      type: 0
-      typeString: CustomFieldType_QuestState
-    - title: Is Item
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Trackable
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Track
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Entry Count
-      value: 1
-      type: 1
-      typeString: CustomFieldType_Number
-    - title: Entry 1 State
-      value: active
-      type: 0
-      typeString: 
-    - title: Entry 1
-      value: '- Talk to survivors.'
-      type: 0
-      typeString: 
-  - id: 3
-    fields:
-    - title: Name
-      value: Open the Garage
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: Remy has locked himself in the garage. James needs the truck keys in
-        the garage so we can leave.
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Success Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Failure Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: State
-      value: unassigned
-      type: 0
-      typeString: CustomFieldType_QuestState
-    - title: Is Item
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Trackable
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Track
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Entry Count
-      value: 2
-      type: 1
-      typeString: CustomFieldType_Number
-    - title: Entry 1 State
-      value: active
-      type: 0
-      typeString: CustomFieldType_QuestState
-    - title: Entry 1
-      value: '- Find a way into the garage.'
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Entry 2 State
-      value: unassigned
-      type: 0
-      typeString: CustomFieldType_QuestState
-    - title: Entry 2
-      value: '- Tell James that you found the garage key.'
-      type: 0
-      typeString: CustomFieldType_Text
+  items: [{id: 1, fields: [{title: Name, value: Dead Reckoning, type: 0, typeString: CustomFieldType_Text},
+        {title: Pictures, value: '[]', type: 3, typeString: CustomFieldType_Files},
+        {title: Description, value: 'Before heading to the bus station, you stopped
+            by your brother''s work to say goodbye. That''s when all hell broke loose.
+            You''re safe, for now, but you''re also trapped. You don''t have enough
+            supplies to last for long. There has to be a way out of this mess!', type: 0,
+          typeString: CustomFieldType_Text}, {title: Success Description, value: '',
+          type: 0, typeString: CustomFieldType_Text}, {title: Failure Description,
+          value: '', type: 0, typeString: CustomFieldType_Text}, {title: State, value: active,
+          type: 0, typeString: CustomFieldType_QuestState}, {title: Is Item, value: False,
+          type: 2, typeString: CustomFieldType_Boolean}]}, {id: 2, fields: [{title: Name,
+          value: Situation at Hand, type: 0, typeString: CustomFieldType_Text}, {
+          title: Pictures, value: '[]', type: 3, typeString: CustomFieldType_Files},
+        {title: Description, value: 'What a crazy day! I wonder if any of these folks
+            know whats going on? I hope James is OK... ', type: 0, typeString: CustomFieldType_Text},
+        {title: Success Description, value: '', type: 0, typeString: CustomFieldType_Text},
+        {title: Failure Description, value: '', type: 0, typeString: CustomFieldType_Text},
+        {title: State, value: active, type: 0, typeString: CustomFieldType_QuestState},
+        {title: Is Item, value: False, type: 2, typeString: CustomFieldType_Boolean},
+        {title: Trackable, value: True, type: 2, typeString: CustomFieldType_Boolean},
+        {title: Track, value: True, type: 2, typeString: CustomFieldType_Boolean},
+        {title: Entry Count, value: 1, type: 1, typeString: CustomFieldType_Number},
+        {title: Entry 1 State, value: active, type: 0, typeString: ''}, {title: Entry
+            1, value: '- Talk to survivors.', type: 0, typeString: ''}]}, {id: 3,
+      fields: [{title: Name, value: Open the Garage, type: 0, typeString: CustomFieldType_Text},
+        {title: Pictures, value: '[]', type: 3, typeString: CustomFieldType_Files},
+        {title: Description, value: Remy has locked himself in the garage. James needs
+            the truck keys in the garage so we can leave., type: 0, typeString: CustomFieldType_Text},
+        {title: Success Description, value: '', type: 0, typeString: CustomFieldType_Text},
+        {title: Failure Description, value: '', type: 0, typeString: CustomFieldType_Text},
+        {title: State, value: unassigned, type: 0, typeString: CustomFieldType_QuestState},
+        {title: Is Item, value: False, type: 2, typeString: CustomFieldType_Boolean},
+        {title: Trackable, value: True, type: 2, typeString: CustomFieldType_Boolean},
+        {title: Track, value: True, type: 2, typeString: CustomFieldType_Boolean},
+        {title: Entry Count, value: 2, type: 1, typeString: CustomFieldType_Number},
+        {title: Entry 1 State, value: active, type: 0, typeString: CustomFieldType_QuestState},
+        {title: Entry 1, value: '- Find a way into the garage.', type: 0, typeString: CustomFieldType_Text},
+        {title: Entry 2 State, value: unassigned, type: 0, typeString: CustomFieldType_QuestState},
+        {title: Entry 2, value: '- Tell James that you found the garage key.', type: 0,
+          typeString: CustomFieldType_Text}]}]
   locations: []
   variables:
   - id: 1
@@ -1970,8 +1866,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestState("Situation at Hand", "success");
 
-        SetQuestState("Open
-        the Garage", "active");
+        SetQuestState("Open the Garage", "active");
 
 '
       onExecute:
@@ -2010,8 +1905,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Sure, it's better for now. But I don't plan on living the rest of
-          my life in this pen.
+        value: Sure, it's better for now. But I don't plan on living the rest of my
+          life in this pen.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
