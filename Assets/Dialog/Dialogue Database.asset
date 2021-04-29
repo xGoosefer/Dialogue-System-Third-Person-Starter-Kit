@@ -214,46 +214,91 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
-  items: [{id: 1, fields: [{title: Name, value: Dead Reckoning, type: 0, typeString: CustomFieldType_Text},
-        {title: Pictures, value: '[]', type: 3, typeString: CustomFieldType_Files},
-        {title: Description, value: 'Before heading to the bus station, you stopped
-            by your brother''s work to say goodbye. That''s when all hell broke loose.
-            You''re safe, for now, but you''re also trapped. You don''t have enough
-            supplies to last for long. There has to be a way out of this mess!', type: 0,
-          typeString: CustomFieldType_Text}, {title: Success Description, value: '',
-          type: 0, typeString: CustomFieldType_Text}, {title: Failure Description,
-          value: '', type: 0, typeString: CustomFieldType_Text}, {title: State, value: active,
-          type: 0, typeString: CustomFieldType_QuestState}, {title: Is Item, value: False,
-          type: 2, typeString: CustomFieldType_Boolean}]}, {id: 2, fields: [{title: Name,
-          value: Situation at Hand, type: 0, typeString: CustomFieldType_Text}, {
-          title: Pictures, value: '[]', type: 3, typeString: CustomFieldType_Files},
-        {title: Description, value: 'What a crazy day! I wonder if any of these folks
-            know whats going on? I hope James is OK... ', type: 0, typeString: CustomFieldType_Text},
-        {title: Success Description, value: '', type: 0, typeString: CustomFieldType_Text},
-        {title: Failure Description, value: '', type: 0, typeString: CustomFieldType_Text},
-        {title: State, value: active, type: 0, typeString: CustomFieldType_QuestState},
-        {title: Is Item, value: False, type: 2, typeString: CustomFieldType_Boolean},
-        {title: Trackable, value: True, type: 2, typeString: CustomFieldType_Boolean},
-        {title: Track, value: True, type: 2, typeString: CustomFieldType_Boolean},
-        {title: Entry Count, value: 1, type: 1, typeString: CustomFieldType_Number},
-        {title: Entry 1 State, value: active, type: 0, typeString: ''}, {title: Entry
-            1, value: '- Talk to survivors.', type: 0, typeString: ''}]}, {id: 3,
-      fields: [{title: Name, value: Open the Garage, type: 0, typeString: CustomFieldType_Text},
-        {title: Pictures, value: '[]', type: 3, typeString: CustomFieldType_Files},
-        {title: Description, value: Remy has locked himself in the garage. James needs
-            the truck keys in the garage so we can leave., type: 0, typeString: CustomFieldType_Text},
-        {title: Success Description, value: '', type: 0, typeString: CustomFieldType_Text},
-        {title: Failure Description, value: '', type: 0, typeString: CustomFieldType_Text},
-        {title: State, value: unassigned, type: 0, typeString: CustomFieldType_QuestState},
-        {title: Is Item, value: False, type: 2, typeString: CustomFieldType_Boolean},
-        {title: Trackable, value: True, type: 2, typeString: CustomFieldType_Boolean},
-        {title: Track, value: True, type: 2, typeString: CustomFieldType_Boolean},
-        {title: Entry Count, value: 2, type: 1, typeString: CustomFieldType_Number},
-        {title: Entry 1 State, value: active, type: 0, typeString: CustomFieldType_QuestState},
-        {title: Entry 1, value: '- Find a way into the garage.', type: 0, typeString: CustomFieldType_Text},
-        {title: Entry 2 State, value: unassigned, type: 0, typeString: CustomFieldType_QuestState},
-        {title: Entry 2, value: '- Tell James that you found the garage key.', type: 0,
-          typeString: CustomFieldType_Text}]}]
+  items:
+  - id: 1
+    fields:
+    - title: Name
+      value: Dead Reckoning
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Before heading to the bus station, you stopped by your brother's work
+        to say goodbye. That's when all hell broke loose. You're safe, for now, but
+        you're also trapped. You don't have enough supplies to last for long. There
+        has to be a way out of this mess!
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: State
+      value: active
+      type: 0
+      typeString: CustomFieldType_QuestState
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+  - id: 2
+    fields:
+    - title: Name
+      value: Situation at Hand
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 'What a crazy day! I wonder if any of these folks know whats going on?
+        I hope James is OK... '
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: State
+      value: active
+      type: 0
+      typeString: CustomFieldType_QuestState
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry
+      value: 
+      type: 0
+      typeString: 
   locations: []
   variables:
   - id: 1
@@ -1866,7 +1911,8 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestState("Situation at Hand", "success");
 
-        SetQuestState("Open the Garage", "active");
+        SetQuestState("Open
+        the Garage", "active");
 
 '
       onExecute:
@@ -1905,8 +1951,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Sure, it's better for now. But I don't plan on living the rest of my
-          life in this pen.
+        value: Sure, it's better for now. But I don't plan on living the rest of
+          my life in this pen.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3704,7 +3750,7 @@ MonoBehaviour:
   - id: 10
     fields:
     - title: Title
-      value: PeteIntro
+      value: GameIntro
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -3863,9 +3909,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'CinemachinePriority(JodyVcam, cut);
-
-          {{default}}'
+        value: 
         type: 0
         typeString: 
       conversationID: 10
@@ -4106,14 +4150,14 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 296
-        y: 214
+        x: 205
+        y: 235
         width: 160
         height: 30
     - id: 5
       fields:
       - title: Title
-        value: New Dialogue Entry
+        value: 
         type: 0
         typeString: 
       - title: Pictures
@@ -4137,7 +4181,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: How come she wasn't helping?
+        value: For a minute I thought you were going leave me out there...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4171,8 +4215,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 220
+        x: 9
+        y: 226
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
