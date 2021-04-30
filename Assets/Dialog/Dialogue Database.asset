@@ -3838,7 +3838,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: None()
+        value: None();
         type: 0
         typeString: 
       conversationID: 10
@@ -3909,6 +3909,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, Pete@T-Pose);
+
+          {{default}};'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -3934,7 +3942,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 31
-        y: 70
+        y: 73
         width: 160
         height: 30
     - id: 2
@@ -3980,7 +3988,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Camera(Medium);
+
+          {{default}};'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -4055,7 +4065,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Camera(Medium);
+
+          {{default}};'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: Camera(Medium, Player);
         type: 0
         typeString: 
       conversationID: 10
@@ -4132,7 +4148,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetCinemachineBrain(true);
         type: 0
         typeString: 
       conversationID: 10
@@ -4150,8 +4166,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 205
-        y: 235
+        x: 185.23404
+        y: 236.02362
         width: 160
         height: 30
     - id: 5
@@ -4197,7 +4213,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetCinemachineBrain(true);
         type: 0
         typeString: 
       conversationID: 10
@@ -4215,12 +4231,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 9
-        y: 226
+        x: 3.349083
+        y: 238.55035
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 93.406586}
+    canvasZoom: 0.9100001
   syncInfo:
     syncActors: 0
     syncItems: 0
