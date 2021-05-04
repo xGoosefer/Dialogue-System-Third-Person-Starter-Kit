@@ -25540,9 +25540,7 @@ MonoBehaviour:
   questEntryNumber: 1
   questEntryState: 0
   luaCode: 
-  sequence: 'Fade(in,2);
-
-    MoveToRootMotion(PlayerCharacterPosition, Player, 0.1);'
+  sequence: Fade(in,2);
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1

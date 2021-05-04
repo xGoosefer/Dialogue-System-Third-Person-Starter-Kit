@@ -3911,9 +3911,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetCinemachineBrain(false);
 
-          Camera(Medium, Pete@T-Pose);
+          AnimatorPlay(Yelling,Pete@T-Pose
+          );
 
-          {{default}};'
+          Camera(Wide, Pete@T-Pose);
+
+          Delay(3.5);'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -4235,8 +4238,8 @@ MonoBehaviour:
         y: 238.55035
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 93.406586}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.97
   syncInfo:
     syncActors: 0
     syncItems: 0
