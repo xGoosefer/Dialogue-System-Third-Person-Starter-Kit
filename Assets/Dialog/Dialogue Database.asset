@@ -3991,7 +3991,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Camera(Medium);
+        value: 'Camera(Wide);
 
           {{default}};'
         type: 0
@@ -4068,7 +4068,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Camera(Medium);
+        value: 'Camera(Wide);
 
           {{default}};'
         type: 0
