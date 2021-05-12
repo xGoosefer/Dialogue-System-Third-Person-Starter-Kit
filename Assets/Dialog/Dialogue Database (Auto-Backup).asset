@@ -60,6 +60,10 @@ MonoBehaviour:
       value: 0
       type: 1
       typeString: CustomFieldType_Number
+    - title: Display Name
+      value: Shae
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -210,6 +214,28 @@ MonoBehaviour:
       value: 0
       type: 1
       typeString: CustomFieldType_Number
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 7
+    fields:
+    - title: Name
+      value: Shae
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Player character for when we want no dialog choices.
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -3852,7 +3878,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 0
         destinationConversationID: 10
-        destinationDialogueID: 1
+        destinationDialogueID: 6
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3862,8 +3888,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 20
+        x: 20
+        y: 55
         width: 160
         height: 30
     - id: 1
@@ -3909,11 +3935,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetCinemachineBrain(false);
+        value: 'AnimatorPlay(Yelling,Pete@T-Pose );
 
-          Camera(Medium, Pete@T-Pose);
+          Camera(Wide, Pete@T-Pose);
 
-          {{default}};'
+          Delay(3.25);'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -3941,8 +3967,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31
-        y: 73
+        x: 381.03094
+        y: 57.06186
         width: 160
         height: 30
     - id: 2
@@ -3988,9 +4014,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Camera(Medium);
-
-          {{default}};'
+        value: "Camera(Wide);\nMoveToRootMotion(StartingSequenceTarget, Player, .1);\nDelay(3);\t"
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -4018,8 +4042,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31
-        y: 121
+        x: 591.95874
+        y: 55.000015
         width: 160
         height: 30
     - id: 3
@@ -4065,13 +4089,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Camera(Medium);
+        value: 'Camera(Full);
 
           {{default}};'
         type: 0
         typeString: 
       - title: Response Menu Sequence
-        value: Camera(Medium, Player);
+        value: Camera(Wide, Player);
         type: 0
         typeString: 
       conversationID: 10
@@ -4101,8 +4125,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 167
+        x: 772.9896
+        y: 55.00003
         width: 160
         height: 30
     - id: 4
@@ -4166,8 +4190,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 185.23404
-        y: 236.02362
+        x: 952.99054
+        y: 32.95877
         width: 160
         height: 30
     - id: 5
@@ -4231,11 +4255,86 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 3.349083
-        y: 238.55035
+        x: 952.99054
+        y: 78.969086
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    - id: 6
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Help!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Wide, Player);
+
+          Delay(2);'
+        type: 0
+        typeString: 
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 6
+        destinationConversationID: 10
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 201.03093
+        y: 56.03093
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 0, y: 18.556702}
     canvasZoom: 0.97
   syncInfo:
     syncActors: 0

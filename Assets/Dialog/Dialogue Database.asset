@@ -2065,7 +2065,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: LookAt(Player, James, 1);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -2089,8 +2089,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.98164
-        y: 55.567017
+        x: 213.99657
+        y: 60.044617
         width: 160
         height: 30
     - id: 9
@@ -2455,8 +2455,8 @@ MonoBehaviour:
         y: 55.176743
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 261.546}
-    canvasZoom: 0.7000001
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.67000014
   - id: 6
     fields:
     - title: Title
