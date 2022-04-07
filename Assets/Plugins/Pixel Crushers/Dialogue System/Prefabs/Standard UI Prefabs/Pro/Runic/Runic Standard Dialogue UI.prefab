@@ -1096,7 +1096,7 @@ MonoBehaviour:
   buttonTemplate: {fileID: 11422190}
   buttonTemplateHolder: {fileID: 11468530}
   buttonTemplateScrollbar: {fileID: 11480266}
-  scrollbarEnabler: {fileID: 0}
+  scrollbarEnabler: {fileID: 11467564}
   buttonTemplateScrollbarResetValue: 0
   explicitNavigationForTemplateButtons: 1
   loopExplicitNavigation: 0
@@ -1113,6 +1113,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   focusAnimationTrigger: 
   unfocusAnimationTrigger: 
+  waitForClose: 0
   onFocus:
     m_PersistentCalls:
       m_Calls: []
@@ -1541,7 +1542,10 @@ MonoBehaviour:
   unfocusAnimationTrigger: 
   useAnimatedPortraits: 1
   onlyShowNPCPortraits: 0
+  waitForClose: 0
   clearTextOnClose: 1
+  clearTextOnConversationStart: 0
+  scrollbarEnabler: {fileID: 11467564}
   onFocus:
     m_PersistentCalls:
       m_Calls: []
@@ -2222,6 +2226,7 @@ MonoBehaviour:
     - {fileID: 11426384}
     defaultMenuPanel: {fileID: 11426384}
     useFirstResponseForMenuPortrait: 0
+    waitForClose: 1
   QTEIndicatorElements:
     QTEIndicators:
     - {fileID: 128998}

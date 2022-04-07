@@ -19,6 +19,6 @@ See the file _README.TXT for information about the Dialogue System.
 
 To purchase a license for commercial use or access to the source code, please visit:
 
-http://u3d.as/content/pixel-crushers/dialogue-system-for-unity/
+https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672
 
 */

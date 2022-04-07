@@ -1347,6 +1347,7 @@ MonoBehaviour:
     - {fileID: 11441396}
     defaultMenuPanel: {fileID: 11441396}
     useFirstResponseForMenuPortrait: 0
+    waitForClose: 1
   QTEIndicatorElements:
     QTEIndicators:
     - {fileID: 179460}
@@ -3163,10 +3164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 64
-  m_MinHeight: 64
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
+  m_MinWidth: 192
+  m_MinHeight: 256
+  m_PreferredWidth: 192
+  m_PreferredHeight: 256
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -3182,10 +3183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 64
-  m_MinHeight: 64
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
+  m_MinWidth: 192
+  m_MinHeight: 256
+  m_PreferredWidth: 192
+  m_PreferredHeight: 256
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -3598,10 +3599,10 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -446.5, y: 199}
-  m_SizeDelta: {x: -925, y: 23}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 48, y: 200}
+  m_SizeDelta: {x: 134, y: 23}
+  m_Pivot: {x: 0, y: 0}
 --- !u!224 &22413482
 RectTransform:
   m_ObjectHideFlags: 1
@@ -4482,10 +4483,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 64
-  m_MinHeight: 64
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
+  m_MinWidth: 192
+  m_MinHeight: 256
+  m_PreferredWidth: 192
+  m_PreferredHeight: 256
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1

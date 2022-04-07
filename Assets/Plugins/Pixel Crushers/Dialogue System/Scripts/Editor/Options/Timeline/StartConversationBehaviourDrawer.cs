@@ -16,7 +16,7 @@ namespace PixelCrushers.DialogueSystem
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            int fieldCount = 4;
+            int fieldCount = 5;
             return fieldCount * EditorGUIUtility.singleLineHeight;
         }
 
@@ -34,9 +34,9 @@ namespace PixelCrushers.DialogueSystem
             }
 
             singleFieldRect.y += EditorGUIUtility.singleLineHeight;
-            EditorGUI.PropertyField(singleFieldRect, conversationProp);
+            EditorGUI.PropertyField(new Rect(singleFieldRect.x, singleFieldRect.y, singleFieldRect.width, 2 * EditorGUIUtility.singleLineHeight), conversationProp);
 
-            singleFieldRect.y += EditorGUIUtility.singleLineHeight;
+            singleFieldRect.y += 2 * EditorGUIUtility.singleLineHeight;
             EditorGUI.PropertyField(singleFieldRect, jumpToSpecificEntryProp);
 
             if (jumpToSpecificEntryProp.boolValue)

@@ -483,8 +483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
+  m_MinWidth: 40
+  m_MinHeight: 40
   m_PreferredWidth: 40
   m_PreferredHeight: 40
   m_FlexibleWidth: -1
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1185022956723936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52fc4bf20f869b145bc60f9d91acdbb1, type: 3}
+  m_Script: {fileID: 11500000, guid: a17f4981fe3eaee409d221dd51c413ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   alertUIElements:
@@ -776,6 +776,7 @@ MonoBehaviour:
     - {fileID: 114470866994336100}
     defaultMenuPanel: {fileID: 114470866994336100}
     useFirstResponseForMenuPortrait: 0
+    waitForClose: 1
   QTEIndicatorElements:
     QTEIndicators: []
   addEventSystemIfNeeded: 1
@@ -1019,6 +1020,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   focusAnimationTrigger: 
   unfocusAnimationTrigger: 
+  waitForClose: 0
   onFocus:
     m_PersistentCalls:
       m_Calls: []
@@ -1367,8 +1369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
+  m_MinWidth: 40
+  m_MinHeight: 40
   m_PreferredWidth: 40
   m_PreferredHeight: 40
   m_FlexibleWidth: -1
@@ -1491,7 +1493,9 @@ MonoBehaviour:
   unfocusAnimationTrigger: 
   useAnimatedPortraits: 0
   onlyShowNPCPortraits: 0
+  waitForClose: 0
   clearTextOnClose: 1
+  clearTextOnConversationStart: 0
   onFocus:
     m_PersistentCalls:
       m_Calls: []
@@ -1736,7 +1740,9 @@ MonoBehaviour:
   unfocusAnimationTrigger: 
   useAnimatedPortraits: 0
   onlyShowNPCPortraits: 0
+  waitForClose: 0
   clearTextOnClose: 1
+  clearTextOnConversationStart: 0
   onFocus:
     m_PersistentCalls:
       m_Calls: []
@@ -2004,8 +2010,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 594, y: -72}
-  m_SizeDelta: {x: 1188, y: 0}
+  m_AnchoredPosition: {x: 527.5, y: -72}
+  m_SizeDelta: {x: 1055, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224606845854425284
 RectTransform:
@@ -2022,10 +2028,10 @@ RectTransform:
   m_Father: {fileID: 224964468361975490}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 594, y: -24}
-  m_SizeDelta: {x: 1188, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 527.5, y: 0}
+  m_SizeDelta: {x: 1055, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224611817714034264
 RectTransform:
@@ -2175,8 +2181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 598, y: -171}
-  m_SizeDelta: {x: 1188, y: 0}
+  m_AnchoredPosition: {x: 531.5, y: -171}
+  m_SizeDelta: {x: 1055, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224760614382297506
 RectTransform:

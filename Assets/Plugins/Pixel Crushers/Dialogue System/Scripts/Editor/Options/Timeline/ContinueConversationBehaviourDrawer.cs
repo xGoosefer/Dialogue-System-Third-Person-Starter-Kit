@@ -75,7 +75,12 @@ namespace PixelCrushers.DialogueSystem
                     if (clip.start > startConversationTime &&
                         clip.asset.GetType() == typeof(ContinueConversationClip))
                     {
-                        numContinues++;
+                        var continueClip = clip.asset as ContinueConversationClip;
+                        if (continueClip.template != null &&
+                            continueClip.template.operation == ContinueConversationBehaviour.Operation.Continue)
+                        {
+                            numContinues++;
+                        }
                     }
                 }
             }

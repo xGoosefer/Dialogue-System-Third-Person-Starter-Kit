@@ -1072,7 +1072,7 @@ MonoBehaviour:
   buttonTemplate: {fileID: 114547911188978186}
   buttonTemplateHolder: {fileID: 114472243396071674}
   buttonTemplateScrollbar: {fileID: 0}
-  scrollbarEnabler: {fileID: 0}
+  scrollbarEnabler: {fileID: 114453497530428824}
   buttonTemplateScrollbarResetValue: 0
   explicitNavigationForTemplateButtons: 1
   loopExplicitNavigation: 0
@@ -1089,6 +1089,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   focusAnimationTrigger: 
   unfocusAnimationTrigger: 
+  waitForClose: 0
   onFocus:
     m_PersistentCalls:
       m_Calls: []
@@ -1164,7 +1165,9 @@ MonoBehaviour:
   unfocusAnimationTrigger: 
   useAnimatedPortraits: 1
   onlyShowNPCPortraits: 0
+  waitForClose: 0
   clearTextOnClose: 1
+  clearTextOnConversationStart: 0
   onFocus:
     m_PersistentCalls:
       m_Calls: []
@@ -1407,6 +1410,7 @@ MonoBehaviour:
     - {fileID: 114342313837476422}
     defaultMenuPanel: {fileID: 114342313837476422}
     useFirstResponseForMenuPortrait: 0
+    waitForClose: 1
   QTEIndicatorElements:
     QTEIndicators:
     - {fileID: 1091825174423646}

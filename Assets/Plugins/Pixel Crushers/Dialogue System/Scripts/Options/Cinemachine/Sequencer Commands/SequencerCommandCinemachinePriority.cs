@@ -18,6 +18,7 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
     /// </summary>
     public class SequencerCommandCinemachinePriority : SequencerCommand
     {
+        private static bool hasRecordedBlendMode = false;
 
         public System.Collections.IEnumerator Start()
         {
@@ -52,11 +53,14 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
                 if (DialogueDebug.LogInfo) Debug.Log("Dialogue System: Sequencer: CinemachinePriority(" + vcamName + ", " + priority + ", cut=" + cut + ")");
 
                 // Handle cut:
+                var shouldIRestoreBlendMode = false;
                 var cinemachineBrain = cut ? FindObjectOfType<CinemachineBrain>() : null;
                 var previousBlendStyle = CinemachineBlendDefinition.Style.EaseInOut;
                 var previousBlendTime = 0f;
                 if (cut && cinemachineBrain != null)
                 {
+                    shouldIRestoreBlendMode = !hasRecordedBlendMode;
+                    hasRecordedBlendMode = true;
                     previousBlendStyle = cinemachineBrain.m_DefaultBlend.m_Style;
                     previousBlendTime = cinemachineBrain.m_DefaultBlend.m_Time;
                     cinemachineBrain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.Cut;
@@ -91,9 +95,13 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
                 if (cut && cinemachineBrain != null)
                 {
                     cinemachineBrain.enabled = true;
-                    yield return null;
-                    cinemachineBrain.m_DefaultBlend.m_Style = previousBlendStyle;
-                    cinemachineBrain.m_DefaultBlend.m_Time = previousBlendTime;
+                    if (shouldIRestoreBlendMode)
+                    {
+                        yield return null;
+                        cinemachineBrain.m_DefaultBlend.m_Style = previousBlendStyle;
+                        cinemachineBrain.m_DefaultBlend.m_Time = previousBlendTime;
+                        hasRecordedBlendMode = false;
+                    }
                 }
             }
             Stop();
