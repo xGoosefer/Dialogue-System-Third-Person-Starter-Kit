@@ -2265,6 +2265,7 @@ MonoBehaviour:
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
   exclusive: 0
+  replace: 0
   skipIfNoValidEntries: 0
   stopConversationOnTriggerExit: 0
   stopConversationIfTooFar: 0
@@ -8550,7 +8551,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.273941, y: 1}
+    m_SensorSize: {x: 1.7789203, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8623,7 +8624,12 @@ MonoBehaviour:
     CinemachinePriority(CM vcam1,99,cut)@2;
 
     CinemachinePriority(CM
-    vcam2,99,cut)@4;'
+    vcam2,99,cut)@4;
+
+    CinemachinePriority(CM vcam1, 0,cut)@6;
+
+    CinemachinePriority(CM
+    vcam2,0,cut)@6;'
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1
@@ -8646,6 +8652,7 @@ MonoBehaviour:
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
   exclusive: 0
+  replace: 0
   skipIfNoValidEntries: 0
   stopConversationOnTriggerExit: 0
   stopConversationIfTooFar: 0
